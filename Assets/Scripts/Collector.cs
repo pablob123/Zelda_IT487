@@ -30,9 +30,15 @@ public class Collector : MonoBehaviour
         if (object_collided_with.CompareTag("rupee"))
         {
             inventory.AddRupees(1);
+            Destroy(object_collided_with);
+            AudioSource.PlayClipAtPoint(Rupee_collection_sound_clip, Camera.main.transform.position);
         }
-        Destroy(object_collided_with);
 
-        AudioSource.PlayClipAtPoint(Rupee_collection_sound_clip, Camera.main.transform.position);
+        if (object_collided_with.CompareTag("heart"))
+        {
+            inventory.AddHealth(1);
+            Destroy(object_collided_with);
+            AudioSource.PlayClipAtPoint(Rupee_collection_sound_clip, Camera.main.transform.position);
+        }
     }
 }

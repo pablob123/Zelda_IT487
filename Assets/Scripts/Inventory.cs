@@ -4,6 +4,7 @@ public class Inventory : MonoBehaviour
 {
 
     int rupee_count = 0;
+    public int health_count = 16;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,5 +26,18 @@ public class Inventory : MonoBehaviour
     public int GetRupees()
     {
         return rupee_count;
+    }
+
+    public void AddHealth(int num_health)
+    {
+        if(health_count < 16)
+        {
+            health_count += num_health;
+        }
+    }
+
+    public int GetHealth()
+    {
+        return health_count;
     }
 }
