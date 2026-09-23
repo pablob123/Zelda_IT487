@@ -17,7 +17,7 @@ public class RupeeDisplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inventory != null && rupeeText != null)
+        if (inventory != null && rupeeText != null)
         {
             rupeeText.text = inventory.GetRupees().ToString();
         }

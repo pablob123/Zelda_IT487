@@ -40,5 +40,11 @@ public class Collector : MonoBehaviour
             Destroy(object_collided_with);
             AudioSource.PlayClipAtPoint(Rupee_collection_sound_clip, Camera.main.transform.position);
         }
+        if (object_collided_with.CompareTag("bomb"))
+        {
+            inventory.AddBombs(1);
+            Destroy(object_collided_with);
+            AudioSource.PlayClipAtPoint(Rupee_collection_sound_clip, Camera.main.transform.position);
+        }
     }
 }
