@@ -5,6 +5,8 @@ public class ArrowKeyMovement : MonoBehaviour
 {
     Rigidbody rb;
     public float movement_speed = 4;
+    public int currHealth;
+    public Inventory inventory;
     private Animator _animator;
     SpriteRenderer sprite;
     [SerializeField]
@@ -42,7 +44,7 @@ public class ArrowKeyMovement : MonoBehaviour
         {
             Vector2 current_input = GetInput();
             rb.linearVelocity = current_input * movement_speed;
-
+            currHealth = inventory.GetHealth();
             if (Input.GetKeyDown(KeyCode.X))
             {
                 StartCoroutine(playerAttack(current_input));
@@ -98,6 +100,7 @@ public class ArrowKeyMovement : MonoBehaviour
         Vector3 currPosition = transform.position;
         GameObject sword;
         
+        
         playLock = true;
 
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkDown"))
@@ -115,7 +118,7 @@ public class ArrowKeyMovement : MonoBehaviour
             }
             //Deletes sword sprite
             Destroy(sword, .2f);
-            if(beamShot == false)
+            if(beamShot == false && currHealth== 6)
             {
                 StartCoroutine(shootSwordBeam(swordDown));
             }
@@ -135,7 +138,7 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
-            if (beamShot == false)
+            if (beamShot == false && currHealth == 6)
             {
                 StartCoroutine(shootSwordBeam(swordUp));
             }
@@ -154,7 +157,7 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
-            if (beamShot == false)
+            if (beamShot == false && currHealth == 6)
             {
                 StartCoroutine(shootSwordBeam(swordRight));
             }
@@ -174,7 +177,7 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
-            if (beamShot == false)
+            if (beamShot == false && currHealth == 6)
             {
                 StartCoroutine(shootSwordBeam(swordLeft));
             }
@@ -189,7 +192,6 @@ public class ArrowKeyMovement : MonoBehaviour
     IEnumerator shootSwordBeam(GameObject swordBeam)
     {
         Vector3 currPosition = transform.position;
-        bool noHit = true;
         //GameObject swordBeam;
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkUp"))
         {
@@ -197,36 +199,31 @@ public class ArrowKeyMovement : MonoBehaviour
             
             while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).y < 0.8 )
             {
-                if (Physics.Raycast(swordBeam.transform.position, -Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                swordBeam.transform.position += new Vector3(0, 0.2f, 0);
+                if (Physics.Raycast(swordBeam.transform.position, -Vector3.up, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.transform.position += new Vector3(0, 0.2f, 0);
                     Destroy(hit.collider.gameObject);
-                    noHit = false;
-                    yield return null;
-                    Destroy(swordBeam, .2f);
+                    Destroy(swordBeam);
+                    break;
                 }
-                swordBeam.transform.position += new Vector3(0, 0.2f, 0);
                 yield return null;
-                if(swordBeam != null)
-                {
-                    Destroy(swordBeam, .2f);
-                }
             }
-            //Destroy(swordBeam, .2f);
+            Destroy(swordBeam, .2f);
         }
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkDown"))
         {
             swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(0, -.8f, 0), Quaternion.identity);
             while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).y > 0)
             {
-                if (Physics.Raycast(swordBeam.transform.position, Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                swordBeam.transform.position += new Vector3(0, -0.2f, 0);
+                if (Physics.Raycast(swordBeam.transform.position, Vector3.up, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.transform.position += new Vector3(0, -0.2f, 0);
                     Destroy(hit.collider.gameObject);
-                    yield return null;
-                    Destroy(swordBeam, .2f);
+                    Destroy(swordBeam);
+                    break;
                 }
-                swordBeam.transform.position += new Vector3(0, -0.2f, 0);
                 yield return null;
             }
             Destroy(swordBeam, .2f);
@@ -236,15 +233,14 @@ public class ArrowKeyMovement : MonoBehaviour
             swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(.8f, 0, 0), Quaternion.identity);
             while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).x < 1)
             {
-                if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                swordBeam.transform.position += new Vector3(0.2f, 0, 0);
+                if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.transform.position += new Vector3(0.2f, 0, 0);
                     Destroy(hit.collider.gameObject);
-                    yield return null;
-                    Destroy(swordBeam, .2f);
+                    Destroy(swordBeam);
+                    break;
                 }
-
-                swordBeam.transform.position += new Vector3(0.2f, 0, 0);
                 yield return null;
             }
             Destroy(swordBeam, .2f);
@@ -254,14 +250,14 @@ public class ArrowKeyMovement : MonoBehaviour
             swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(-.8f, 0, 0), Quaternion.identity);
             while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).x > 0)
             {
-                if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                swordBeam.transform.position += new Vector3(-0.2f, 0, 0);
+                if (Physics.Raycast(swordBeam.transform.position, -Vector3.right, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.transform.position += new Vector3(-0.2f, 0, 0);
                     Destroy(hit.collider.gameObject);
-                    yield return null;
-                    Destroy(swordBeam, .2f);
+                    Destroy(swordBeam);
+                    break;
                 }
-                swordBeam.transform.position += new Vector3(-0.2f, 0, 0);
                 yield return null;
             }
             Destroy(swordBeam, .2f);

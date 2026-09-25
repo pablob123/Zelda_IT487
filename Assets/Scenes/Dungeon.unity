@@ -206568,6 +206568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   movement_speed: 4
+  currHealth: 0
+  inventory: {fileID: 1968298379}
   attackSpriteDown: {fileID: 21300048, guid: 45afd34443b96473598b76e2b1778b4e, type: 3}
   attackSpriteUp: {fileID: 21300052, guid: 45afd34443b96473598b76e2b1778b4e, type: 3}
   attackSpriteRight: {fileID: 21300054, guid: 45afd34443b96473598b76e2b1778b4e, type: 3}
@@ -206649,7 +206651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddfd7ee484f9fc428327bed87cecb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  health_count: 16
+  health_count: 6
   bomb_count: 8
 --- !u!95 &1968298380
 Animator:

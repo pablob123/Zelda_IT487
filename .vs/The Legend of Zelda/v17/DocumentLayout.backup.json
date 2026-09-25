@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "E:\\Unity Projects\\The Legend of Zelda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\collector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\rupeedisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\rupeedisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rupeedisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\collector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\healthdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BombDisplayer.cs",
               "DocumentMoniker": "E:\\Unity Projects\\The Legend of Zelda\\Assets\\Scripts\\BombDisplayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BombDisplayer.cs",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Assets\\Scripts\\BombDisplayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T19:28:40.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T19:28:40.974Z"
             },
             {
               "$type": "Document",
@@ -63,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RupeeDisplayer.cs",
               "DocumentMoniker": "E:\\Unity Projects\\The Legend of Zelda\\Assets\\Scripts\\RupeeDisplayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RupeeDisplayer.cs",
@@ -71,12 +70,11 @@
               "RelativeToolTip": "Assets\\Scripts\\RupeeDisplayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T20:44:15.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T20:44:15.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Inventory.cs",
               "DocumentMoniker": "E:\\Unity Projects\\The Legend of Zelda\\Assets\\Scripts\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory.cs",
@@ -84,12 +82,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Inventory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T23:16:40.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T23:16:40.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Collector.cs",
               "DocumentMoniker": "E:\\Unity Projects\\The Legend of Zelda\\Assets\\Scripts\\Collector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collector.cs",
@@ -97,7 +94,8 @@
               "RelativeToolTip": "Assets\\Scripts\\Collector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T23:13:08.545Z"
+              "WhenOpened": "2026-09-21T23:13:08.545Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -107,7 +105,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowKeyMovement.cs",
               "ToolTip": "E:\\Unity Projects\\The Legend of Zelda\\Assets\\Scripts\\ArrowKeyMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\ArrowKeyMovement.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEUAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwG8AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-21T22:52:56.916Z",
               "EditorCaption": ""
