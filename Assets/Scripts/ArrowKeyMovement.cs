@@ -7,17 +7,25 @@ public class ArrowKeyMovement : MonoBehaviour
     public float movement_speed = 4;
     private Animator _animator;
     SpriteRenderer sprite;
-
-    public Sprite attackSpriteDown;
-    public Sprite attackSpriteUp;
-    public Sprite attackSpriteRight;
-    public Sprite attackSpriteLeft;
-    public GameObject swordDown;
-    public GameObject swordUp;
-    public GameObject swordRight;
-    public GameObject swordLeft;
+    [SerializeField]
+    Sprite attackSpriteDown;
+    [SerializeField]
+    Sprite attackSpriteUp;
+    [SerializeField]
+    Sprite attackSpriteRight;
+    [SerializeField]
+    Sprite attackSpriteLeft;
+    [SerializeField]
+    GameObject swordDown;
+    [SerializeField]
+    GameObject swordUp;
+    [SerializeField]
+    GameObject swordRight;
+    [SerializeField]
+    GameObject swordLeft;
 
     private bool playLock = false;
+    private bool beamShot = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,7 +56,7 @@ public class ArrowKeyMovement : MonoBehaviour
         float horizontal_input = Input.GetAxisRaw("Horizontal");
 
         float vertical_input = Input.GetAxisRaw("Vertical");
-        if(Mathf.Abs(horizontal_input) > 0.0f)
+        if (Mathf.Abs(horizontal_input) > 0.0f)
         {
             vertical_input = 0.0f;
         }
@@ -63,7 +71,7 @@ public class ArrowKeyMovement : MonoBehaviour
         if (horizontal > 0)
         {
             _animator.Play("WalkRight");
-            
+
         }
         else if (horizontal < 0)
         {
@@ -89,7 +97,7 @@ public class ArrowKeyMovement : MonoBehaviour
         _animator.enabled = false;
         Vector3 currPosition = transform.position;
         GameObject sword;
-        GameObject swordBeam;
+        
         playLock = true;
 
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkDown"))
@@ -101,20 +109,18 @@ public class ArrowKeyMovement : MonoBehaviour
             //Creates sword sprite
             sword = Object.Instantiate(swordDown, currPosition + new Vector3(0, -.8f, 0), Quaternion.identity);
             //Creates actual raycast to destroy objects
-            if(Physics.Raycast(this.transform.position, -Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+            if (Physics.Raycast(this.transform.position, -Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
             {
                 Destroy(hit.collider.gameObject);
             }
             //Deletes sword sprite
             Destroy(sword, .2f);
-
-            swordBeam = Object.Instantiate(swordDown, currPosition + new Vector3(0, -.8f, 0), Quaternion.identity);
-            while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).y > 0)
+            if(beamShot == false)
             {
-                swordBeam.transform.position += new Vector3(0, -0.2f, 0);
-                yield return null;
+                StartCoroutine(shootSwordBeam(swordDown));
             }
-            Destroy(swordBeam, .2f);
+            beamShot = true;
+
         }
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkUp"))
         {
@@ -129,6 +135,11 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
+            if (beamShot == false)
+            {
+                StartCoroutine(shootSwordBeam(swordUp));
+            }
+            beamShot = true;
         }
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkRight"))
         {
@@ -143,6 +154,11 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
+            if (beamShot == false)
+            {
+                StartCoroutine(shootSwordBeam(swordRight));
+            }
+            beamShot = true;
 
         }
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkLeft"))
@@ -158,11 +174,100 @@ public class ArrowKeyMovement : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
             Destroy(sword, .2f);
+            if (beamShot == false)
+            {
+                StartCoroutine(shootSwordBeam(swordLeft));
+            }
+            beamShot = true;
         }
 
         yield return new WaitForSeconds(0.2f);
         playLock = false;
         _animator.enabled = true;
+    }
 
+    IEnumerator shootSwordBeam(GameObject swordBeam)
+    {
+        Vector3 currPosition = transform.position;
+        bool noHit = true;
+        //GameObject swordBeam;
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkUp"))
+        {
+            swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(0, .8f, 0), Quaternion.identity);
+            
+            while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).y < 0.8 )
+            {
+                if (Physics.Raycast(swordBeam.transform.position, -Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                {
+                    hit.transform.position += new Vector3(0, 0.2f, 0);
+                    Destroy(hit.collider.gameObject);
+                    noHit = false;
+                    yield return null;
+                    Destroy(swordBeam, .2f);
+                }
+                swordBeam.transform.position += new Vector3(0, 0.2f, 0);
+                yield return null;
+                if(swordBeam != null)
+                {
+                    Destroy(swordBeam, .2f);
+                }
+            }
+            //Destroy(swordBeam, .2f);
+        }
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkDown"))
+        {
+            swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(0, -.8f, 0), Quaternion.identity);
+            while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).y > 0)
+            {
+                if (Physics.Raycast(swordBeam.transform.position, Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                {
+                    hit.transform.position += new Vector3(0, -0.2f, 0);
+                    Destroy(hit.collider.gameObject);
+                    yield return null;
+                    Destroy(swordBeam, .2f);
+                }
+                swordBeam.transform.position += new Vector3(0, -0.2f, 0);
+                yield return null;
+            }
+            Destroy(swordBeam, .2f);
+        }
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkRight"))
+        {
+            swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(.8f, 0, 0), Quaternion.identity);
+            while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).x < 1)
+            {
+                if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                {
+                    hit.transform.position += new Vector3(0.2f, 0, 0);
+                    Destroy(hit.collider.gameObject);
+                    yield return null;
+                    Destroy(swordBeam, .2f);
+                }
+
+                swordBeam.transform.position += new Vector3(0.2f, 0, 0);
+                yield return null;
+            }
+            Destroy(swordBeam, .2f);
+        }
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkLeft"))
+        {
+            swordBeam = Object.Instantiate(swordBeam, currPosition + new Vector3(-.8f, 0, 0), Quaternion.identity);
+            while (Camera.main.WorldToViewportPoint(swordBeam.transform.position).x > 0)
+            {
+                if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
+                {
+                    hit.transform.position += new Vector3(-0.2f, 0, 0);
+                    Destroy(hit.collider.gameObject);
+                    yield return null;
+                    Destroy(swordBeam, .2f);
+                }
+                swordBeam.transform.position += new Vector3(-0.2f, 0, 0);
+                yield return null;
+            }
+            Destroy(swordBeam, .2f);
+        }
+
+        yield return null;
+        beamShot = false;
     }
 }
