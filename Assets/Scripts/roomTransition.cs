@@ -3,6 +3,8 @@ using System.Collections;
 
 public class roomTransition : MonoBehaviour
 {
+    Inventory inventory;
+
     private Vector3 cameraPosition = Vector3.zero;
     Vector3 playerPosition = Vector3.zero;
     public Camera camera;
@@ -12,6 +14,7 @@ public class roomTransition : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        inventory = GetComponent<Inventory>();
         cameraPosition = camera.transform.position;
     }
 
@@ -109,6 +112,18 @@ public class roomTransition : MonoBehaviour
         }
         cameraPosition = camera.transform.position;
         changingRoom = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("doorLock"))
+        {
+            if(inventory.GetKey() >= 1)
+            {
+                Destroy(collision.gameObject);
+                inventory.ChangeKey(-1);
+            }
+        }
     }
 
     //private void OnTriggerEnter(Collider other)

@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 public class HasHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
+    Inventory inventory;
+    public int maxHealth = 6;
     private int currentHealth;
 
     void Start()
     {
+        inventory = GetComponent<Inventory>();
         currentHealth = maxHealth;
     }
 
@@ -37,6 +39,9 @@ public class HasHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inventory.GetGodMode())
+        {
+            currentHealth = 6;
+        }
     }
 }

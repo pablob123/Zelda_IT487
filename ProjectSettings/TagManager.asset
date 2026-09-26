@@ -9,6 +9,8 @@ TagManager:
   - bomb
   - enemy
   - doorleft
+  - doorLock
+  - key
   layers:
   - Default
   - TransparentFX

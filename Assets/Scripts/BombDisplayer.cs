@@ -19,7 +19,7 @@ public class BombDisplayer : MonoBehaviour
     {
         if (inventory != null && bombText != null)
         {
-            bombText.text = inventory.GetBombs().ToString();
+            bombText.text = "Bombs: " + inventory.GetBombs().ToString();
         }
     }
 }

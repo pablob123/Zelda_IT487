@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthDisplayer : MonoBehaviour
 {
 
-    public Inventory inventory;
+    public HasHealth health;
     TMP_Text healthText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,9 +17,9 @@ public class HealthDisplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inventory != null && healthText != null)
+        if(health != null && healthText != null)
         {
-            healthText.text = inventory.GetHealth().ToString();
+            healthText.text = "Health: " + health.GetCurrentHealth().ToString();
         }
     }
 }
