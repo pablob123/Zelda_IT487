@@ -11,6 +11,8 @@ TagManager:
   - doorleft
   - doorLock
   - key
+  - bow
+  - wall
   layers:
   - Default
   - TransparentFX

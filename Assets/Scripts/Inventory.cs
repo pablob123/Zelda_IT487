@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     public int health_count = 6;
     public int bomb_count = 8;
     public int key_count = 0;
+    public bool hasBow = false;
 
     public static bool god_mode = false;
 
@@ -84,6 +85,27 @@ public class Inventory : MonoBehaviour
     public int GetKey()
     {
         return key_count;
+    }
+    public void AddBow()
+    {
+        hasBow = true;
+    }
+    public bool GetBow()
+    {
+        return hasBow;
+    }
+
+    public string GetWeapon()
+    {
+        //Temp until more weapons are added
+        if (hasBow == true)
+        {
+            return "Bow";
+        }
+        else
+        {
+            return "";
+        }
     }
 
     public bool GetGodMode()

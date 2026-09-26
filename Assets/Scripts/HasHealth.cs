@@ -28,7 +28,10 @@ public class HasHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("You Died!");
+        if(inventory != null)
+        {
+            Debug.Log("You Died!");
+        }
 
     }
 
@@ -39,7 +42,7 @@ public class HasHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inventory.GetGodMode())
+        if (inventory != null && inventory.GetGodMode())
         {
             currentHealth = 6;
         }
