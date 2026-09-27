@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "E:\\Unity Projects\\The Legend of Zelda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\bow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\bow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\weapondisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\weapondisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapondisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bombdisplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|e:\\unity projects\\the legend of zelda\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|E:\\Unity Projects\\The Legend of Zelda\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D9434D1-A3A1-657E-7477-B2861183B59F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -107,8 +107,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Inventory.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAwGMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T23:16:40.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T23:16:40.674Z"
             },
             {
               "$type": "Document",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Collector.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAwwDgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T23:13:08.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T23:13:08.545Z"
             },
             {
               "$type": "Document",
@@ -133,8 +131,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Weapons.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T20:23:41.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T20:23:41.666Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "Assets\\Scripts\\WeaponDisplayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T22:56:33.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T22:56:33.691Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "Assets\\Scripts\\BombDisplayer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T22:56:41.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T22:56:41.186Z"
             }
           ]
         }

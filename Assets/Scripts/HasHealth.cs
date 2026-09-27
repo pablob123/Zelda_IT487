@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class HasHealth : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class HasHealth : MonoBehaviour
     {
         if(inventory != null)
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Debug.Log("You Died!");
         }
 

@@ -5,11 +5,11 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform player;
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()

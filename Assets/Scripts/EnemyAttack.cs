@@ -3,22 +3,27 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    HasHealth health;
     public int damage = 1;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth playerHealth =
-                collision.gameObject.GetComponent<PlayerHealth>();
+            collision.collider.GetComponent<HasHealth>().TakeDamage(1);
 
-            if (playerHealth != null)
-            {
-                Vector2 knockbackDirection =
-                    collision.transform.position - transform.position;
+            //if (playerHealth != null)
+            //{
+            //    Vector2 knockbackDirection =
+            //        collision.transform.position - transform.position;
 
-                playerHealth.TakeDamage(damage, knockbackDirection);
-            }
+            //    playerHealth.TakeDamage(damage, knockbackDirection);
+            //}
         }
     }
 
@@ -26,7 +31,8 @@ public class EnemyAttack : MonoBehaviour
     {
         internal void TakeDamage(int damage, Vector2 knockbackDirection)
         {
-            throw new NotImplementedException();
+
+            //throw new NotImplementedException();
         }
     }
 }
