@@ -88174,6 +88174,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5786436879825546183, guid: 696c905e95d4ff0438c8346a4d1bded3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 855854223}
+    - targetCorrespondingSourceObject: {fileID: 5786436879825546183, guid: 696c905e95d4ff0438c8346a4d1bded3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 855854224}
   m_SourcePrefab: {fileID: 100100000, guid: 696c905e95d4ff0438c8346a4d1bded3, type: 3}
 --- !u!1 &855854216 stripped
 GameObject:
@@ -88205,8 +88208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adbde1762579b949b40fdb503099ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 6
-  knockbackForce: 1
+  maxHealth: 3
+  knockbackForce: 5
 --- !u!61 &855854219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88302,6 +88305,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &855854224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855854216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99868a59d0527e4ab4c99da5d680d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  moveSpeed: 2
+  player: {fileID: 1968298374}
 --- !u!1001 &856057974
 PrefabInstance:
   m_ObjectHideFlags: 0
