@@ -44,7 +44,7 @@ public class KeeseMovement : MonoBehaviour
         {
             this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(newX, newY, 0f), 2 * Time.deltaTime);
 
-            if(this.transform.position.x == newX && this.transform.position.y == newY)
+            if(rb.position.x == newX && rb.position.y == newY)
             {
                 randomDirection();
                 newX = this.transform.position.x + randomX;
@@ -84,11 +84,13 @@ public class KeeseMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject.CompareTag("wall"))
+        if (collision.collider.CompareTag("wall"))
         {
             randomDirection();
-            newX = this.transform.position.x + randomX;
-            newY = this.transform.position.y + randomY;
+
+            newX = -(newX) + randomX;
+            newY = -(newY) + randomY;
+            //this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(newX, newY, 0f), 2 * Time.deltaTime);
         }
     }
 }

@@ -1,19 +1,32 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class SpikeTrapMovement : MonoBehaviour
 {
+    private Rigidbody rb;
     private bool isMoving = false;
-    private float moveSpeed = 3;
+    private float attackTime;
+    private float returnTime;
 
     private float positionX;
     private float positionY;
     private float newX;
     private float newY;
 
+    [SerializeField]
+    bool moveUpToggle;
+    [SerializeField]
+    bool moveDownToggle;
+    [SerializeField]
+    bool moveRightToggle;
+    [SerializeField]
+    bool moveLeftToggle;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         positionX = this.transform.position.x;
         positionY = this.transform.position.y;
         newX = positionX;
@@ -23,60 +36,86 @@ public class SpikeTrapMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(isMoving == false)
+        if (isMoving == false)
         {
-            isMoving = true;
-            StartCoroutine(spikeTrapIdle());
-        }
+            if (Physics.Raycast(this.transform.position, Vector3.up, out RaycastHit hitUp, 6f) && moveUpToggle)
+            {
+                if (hitUp.collider.gameObject.CompareTag("Player"))
+                {
+                    isMoving = true;
+                    newY = positionY + 3f;
+                    newX = positionX;
+                    attackTime = 0.5f;
+                    returnTime = 2.0f;
+                    StartCoroutine(spikeTrapAttack(newX, newY, attackTime));
+                }
+            }
+            if (Physics.Raycast(this.transform.position, -Vector3.up, out RaycastHit hitDown, 6f) && moveDownToggle)
+            {
+                if (hitDown.collider.gameObject.CompareTag("Player"))
+                {
+                    isMoving = true;
+                    newY = positionY - 3f;
+                    newX = positionX;
+                    attackTime = 0.5f;
+                    returnTime = 2.0f;
+                    StartCoroutine(spikeTrapAttack(newX, newY, attackTime));
+                }
+            }
+            if (Physics.Raycast(this.transform.position, Vector3.right, out RaycastHit hitRight, 11f) && moveRightToggle)
+            {
+                if (hitRight.collider.gameObject.CompareTag("Player"))
+                {
+                    isMoving = true;
+                    newY = positionY;
+                    newX = positionX + 6f;
+                    attackTime = 1.0f;
+                    returnTime = 3.0f;
+                    StartCoroutine(spikeTrapAttack(newX, newY, attackTime));
+                }
+            }
 
+            if (Physics.Raycast(this.transform.position, -Vector3.right, out RaycastHit hitLeft, 11f) && moveLeftToggle)
+            {
+                if (hitLeft.collider.gameObject.CompareTag("Player"))
+                {
+                    isMoving = true;
+                    newY = positionY;
+                    newX = positionX - 6f;
+                    attackTime = 1.0f;
+                    returnTime = 3.0f;
+                    StartCoroutine(spikeTrapAttack(newX, newY, attackTime));
+                }
+            }
+        }
     }
 
-
-    IEnumerator spikeTrapIdle()
+    IEnumerator spikeTrapAttack(float moveX, float moveY, float time)
     {
-        Debug.DrawRay(this.transform.position, this.transform.up * 11f, Color.red, 5f);
-        Debug.DrawRay(this.transform.position, -this.transform.up * 11f, Color.red, 5f);
-        Debug.DrawRay(this.transform.position, this.transform.right * 6f, Color.red, 5f);
-        Debug.DrawRay(this.transform.position, -this.transform.right * 6f, Color.red, 5f);
-        if (Physics.Raycast(this.transform.position, Vector3.up, out RaycastHit hitUp, 11f) &&
-           Physics.Raycast(this.transform.position, -Vector3.up, out RaycastHit hitDown, 11f) &&
-           Physics.Raycast(this.transform.position, Vector3.right, out RaycastHit hitRight, 6f) &&
-           Physics.Raycast(this.transform.position, -Vector3.right, out RaycastHit hitLeft, 6f))
-        {
-            if (hitUp.collider.CompareTag("Player"))
-            {
-                newY = positionY + 3f;
-            }
-            else if (hitDown.collider.CompareTag("Player"))
-            {
-                newY = positionY - 3f;
-            }
-            else if (hitRight.collider.CompareTag("Player"))
-            {
-                newX = positionX + 5.5f;
-            }
-            else if (hitLeft.collider.CompareTag("Player"))
-            {
-                newX = positionX - 5.5f;
-            }
+        float elapsedTime = 0.0f;
 
-            StartCoroutine(spikeTrapAttack(newX, newY));
+        while (elapsedTime < time)
+        {
+            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(newX, newY, 0f), 5f * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
 
+        StartCoroutine(spikeTrapReturn(returnTime));
         yield return null;
     }
 
-    IEnumerator spikeTrapAttack(float moveX, float moveY)
+    IEnumerator spikeTrapReturn(float time)
     {
+        float elapsedTime = 0.0f;
 
-
-        yield return null;
-    }
-
-    IEnumerator spikeTrapReturn()
-    {
+        while (elapsedTime < time)
+        {
+            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(positionX, positionY, 0f), 2f * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        isMoving = false;
         yield return null;
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -301,8 +301,8 @@ MonoBehaviour:
     y: 0
     width: 379
     height: 941
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -671,8 +671,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -20732
-      - m_Data: -1310
+      - m_Data: -1336
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1335,9 +1334,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -0.3286215, y: 0.81103003, z: -0.011471244}
+    m_Target: {x: 55.05072, y: 28.36928, z: -0.04388786}
     speed: 2
-    m_Value: {x: -0.44265717, y: 0.75092256, z: -0.014656395}
+    m_Value: {x: 55.05072, y: 28.36928, z: -0.04388786}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1387,9 +1386,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.7595577
+    m_Target: 10.001191
     speed: 2
-    m_Value: 7.078071
+    m_Value: 10.001191
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1690,7 +1689,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1700,33 +1699,33 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Projects\The Legend of Zelda
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 80}
+    scrollPos: {x: 0, y: 79}
     m_SelectedIDs:
-    - m_Data: 59270
+    - m_Data: 113240
     m_LastClickedID:
-      m_Data: 59270
+      m_Data: 113240
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 59106
-    - m_Data: 59108
-    - m_Data: 59110
-    - m_Data: 59112
-    - m_Data: 59114
-    - m_Data: 59116
-    - m_Data: 59118
-    - m_Data: 59120
-    - m_Data: 59122
-    - m_Data: 59124
-    - m_Data: 59126
-    - m_Data: 59128
-    - m_Data: 59130
+    - m_Data: 113082
+    - m_Data: 113084
+    - m_Data: 113086
+    - m_Data: 113088
+    - m_Data: 113090
+    - m_Data: 113092
+    - m_Data: 113094
+    - m_Data: 113096
+    - m_Data: 113098
+    - m_Data: 113100
+    - m_Data: 113102
+    - m_Data: 113104
+    - m_Data: 113106
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1760,19 +1759,19 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 59106
-    - m_Data: 59108
-    - m_Data: 59110
-    - m_Data: 59112
-    - m_Data: 59114
-    - m_Data: 59116
-    - m_Data: 59118
-    - m_Data: 59120
-    - m_Data: 59122
-    - m_Data: 59124
-    - m_Data: 59126
-    - m_Data: 59128
-    - m_Data: 59130
+    - m_Data: 113082
+    - m_Data: 113084
+    - m_Data: 113086
+    - m_Data: 113088
+    - m_Data: 113090
+    - m_Data: 113092
+    - m_Data: 113094
+    - m_Data: 113096
+    - m_Data: 113098
+    - m_Data: 113100
+    - m_Data: 113102
+    - m_Data: 113104
+    - m_Data: 113106
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
