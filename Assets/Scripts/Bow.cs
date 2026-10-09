@@ -85,7 +85,7 @@ public class Bow : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -115,7 +115,7 @@ public class Bow : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -143,7 +143,7 @@ public class Bow : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -171,7 +171,7 @@ public class Bow : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                         {
                             Destroy(hit.collider.gameObject);
                         }

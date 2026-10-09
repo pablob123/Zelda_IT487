@@ -59238,6 +59238,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3837697588202099093, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
   m_PrefabInstance: {fileID: 1905767265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &559073460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2617728331908589210, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
+  m_PrefabInstance: {fileID: 1935730667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &559073465 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5122969553936952636, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
+  m_PrefabInstance: {fileID: 1935730667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559073460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ad501c4739d34a930ff00a9581110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &559073468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559073460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e050b455c6b79584b980ec9e0d854047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::frozenByBoomerang
+  movement: {fileID: 559073465}
 --- !u!4 &559904648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3837697588202099093, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
@@ -89547,6 +89576,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 760345016}
     m_Modifications:
+    - target: {fileID: -6853362532842342428, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 940950198042086369, guid: 790114acd11b04b4595bb664630b4cff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14
@@ -89602,10 +89635,6 @@ PrefabInstance:
     - target: {fileID: 9011883750512403501, guid: 790114acd11b04b4595bb664630b4cff, type: 3}
       propertyPath: m_Layer
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -6853362532842342428, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -142246,6 +142275,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
+--- !u!1 &1365716989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8184761958686324701, guid: f788ec99d6a9ffb48890dc3b24dd98b8, type: 3}
+  m_PrefabInstance: {fileID: 1494665453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1365716998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365716989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e050b455c6b79584b980ec9e0d854047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  movement: {fileID: 0}
 --- !u!1001 &1366269026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -155426,7 +155473,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8184761958686324701, guid: f788ec99d6a9ffb48890dc3b24dd98b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1365716998}
   m_SourcePrefab: {fileID: 100100000, guid: f788ec99d6a9ffb48890dc3b24dd98b8, type: 3}
 --- !u!4 &1495068331 stripped
 Transform:
@@ -203963,7 +204013,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2617728331908589210, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 559073468}
   m_SourcePrefab: {fileID: 100100000, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
 --- !u!1001 &1935854543
 PrefabInstance:
@@ -207628,6 +207681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   damage: 1
   hasWeapon: 0
+  isThrown: 0
   weaponType: 3
   currHealth: 0
   inventory: {fileID: 1968298379}
@@ -211989,7 +212043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52e6011ba243054b8ea1d4b8ac6fdf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HasHealth
-  maxHealth: 2
+  maxHealth: 0
 --- !u!4 &2012488209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3837697588202099093, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}

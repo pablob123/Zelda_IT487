@@ -65,7 +65,7 @@ public class Boomerang : MonoBehaviour, Weapons
             float newPositionY = boomerang.transform.position.y + distance;
             Vector3 newPosition = new Vector3(boomerang.transform.position.x, newPositionY);
 
-            while (elapsedTime < time)
+            while (Vector3.Distance(boomerang.transform.position, newPosition) > .2f)
             {
                 boomerang.transform.position = Vector3.Lerp(boomerang.transform.position, newPosition, elapsedTime / time);
                 if (Physics.Raycast(boomerang.transform.position, -Vector3.up, out RaycastHit hit, .7f))
@@ -97,10 +97,10 @@ public class Boomerang : MonoBehaviour, Weapons
             float newPositionY = boomerang.transform.position.y - distance;
             Vector3 newPosition = new Vector3(boomerang.transform.position.x, newPositionY);
 
-            while (elapsedTime < time)
+            while (Vector3.Distance(boomerang.transform.position, newPosition) > .2f)
             {
                 boomerang.transform.position = Vector3.Lerp(boomerang.transform.position, newPosition, elapsedTime / time);
-                if (Physics.Raycast(boomerang.transform.position, -Vector3.up, out RaycastHit hit, .7f))
+                if (Physics.Raycast(boomerang.transform.position, Vector3.up, out RaycastHit hit, .7f))
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
@@ -129,24 +129,28 @@ public class Boomerang : MonoBehaviour, Weapons
             float newPositionX = boomerang.transform.position.x + distance;
             Vector3 newPosition = new Vector3(newPositionX, boomerang.transform.position.y);
 
-            while (elapsedTime < time)
+            while (Vector3.Distance(boomerang.transform.position, newPosition) > .2f)
             {
                 boomerang.transform.position = Vector3.Lerp(boomerang.transform.position, newPosition, elapsedTime / time);
-                if (Physics.Raycast(boomerang.transform.position, -Vector3.up, out RaycastHit hit, .7f))
+                if (Physics.Raycast(boomerang.transform.position, Vector3.right, out RaycastHit hit, .7f))
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         //hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
+                        
+                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
                         {
                             Destroy(hit.collider.gameObject);
                         }
                         break;
                     }
-                    if (hit.collider.gameObject.CompareTag("wall"))
+                    if(hit.collider.gameObject.CompareTag("wall"))
                     {
                         break;
                     }
+                    break;
                 }
 
                 elapsedTime += Time.deltaTime;
@@ -161,10 +165,10 @@ public class Boomerang : MonoBehaviour, Weapons
             float newPositionX = boomerang.transform.position.x - distance;
             Vector3 newPosition = new Vector3(newPositionX, boomerang.transform.position.y);
 
-            while (elapsedTime < time)
+            while (Vector3.Distance(boomerang.transform.position, newPosition) > .2f)
             {
                 boomerang.transform.position = Vector3.Lerp(boomerang.transform.position, newPosition, elapsedTime / time);
-                if (Physics.Raycast(boomerang.transform.position, -Vector3.up, out RaycastHit hit, .7f))
+                if (Physics.Raycast(boomerang.transform.position, -Vector3.right, out RaycastHit hit, .7f))
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
@@ -187,20 +191,19 @@ public class Boomerang : MonoBehaviour, Weapons
             StartCoroutine(boomerangReturn(boomerang));
         }
 
-
-        IEnumerator boomerangReturn(GameObject boomerang)
+    }
+    IEnumerator boomerangReturn(GameObject boomerang)
+    {
+        while (Vector3.Distance(boomerang.transform.position, player.transform.position) > 0.2f)
         {
-            while (boomerang.transform.position != player.transform.position)
-            {
-                boomerang.transform.position += (player.transform.position - boomerang.transform.position).normalized * .2f;
-                yield return null;
-            }
-            Destroy(boomerang);
-
-            isThrown = false;
+            boomerang.transform.position += (player.transform.position - boomerang.transform.position).normalized * .2f;
             yield return null;
-
         }
+        Destroy(boomerang);
+
+        isThrown = false;
+        yield return null;
+
     }
 }
 

@@ -79,7 +79,7 @@ public class Sword : MonoBehaviour, Weapons
             if (Physics.Raycast(this.transform.position, -Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
             {
                 hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                if(hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                if(hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                 {
                     Destroy(hit.collider.gameObject);
                 }
@@ -105,7 +105,7 @@ public class Sword : MonoBehaviour, Weapons
             if (Physics.Raycast(this.transform.position, Vector3.up, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
             {
                 hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                 {
                     Destroy(hit.collider.gameObject);
                 }
@@ -128,7 +128,7 @@ public class Sword : MonoBehaviour, Weapons
             if (Physics.Raycast(this.transform.position, Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
             {
                 hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                 {
                     Destroy(hit.collider.gameObject);
                 }
@@ -152,7 +152,7 @@ public class Sword : MonoBehaviour, Weapons
             if (Physics.Raycast(this.transform.position, -Vector3.right, out RaycastHit hit, 1.3f) && hit.collider.gameObject.CompareTag("enemy"))
             {
                 hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                 {
                     Destroy(hit.collider.gameObject);
                 }
@@ -184,7 +184,7 @@ public class Sword : MonoBehaviour, Weapons
                 if (Physics.Raycast(swordBeam.transform.position, -Vector3.up, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                     {
                         Destroy(hit.collider.gameObject);
                     }
@@ -204,7 +204,7 @@ public class Sword : MonoBehaviour, Weapons
                 if (Physics.Raycast(swordBeam.transform.position, Vector3.up, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                     {
                         Destroy(hit.collider.gameObject);
                     }
@@ -224,7 +224,7 @@ public class Sword : MonoBehaviour, Weapons
                 if (Physics.Raycast(swordBeam.transform.position, Vector3.right, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                     {
                         Destroy(hit.collider.gameObject);
                     }
@@ -244,7 +244,7 @@ public class Sword : MonoBehaviour, Weapons
                 if (Physics.Raycast(swordBeam.transform.position, -Vector3.right, out RaycastHit hit, .7f) && hit.collider.gameObject.CompareTag("enemy"))
                 {
                     hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() <= 0)
                     {
                         Destroy(hit.collider.gameObject);
                     }
