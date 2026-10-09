@@ -13,6 +13,7 @@ TagManager:
   - key
   - bow
   - wall
+  - boomerang
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - IgnoreKeese
+  - Ignore
   - Keese
   - 
   - 

@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     public int bomb_count = 8;
     public int key_count = 0;
     public bool hasBow = false;
+    public bool hasBoomerang = false;
 
     public static bool god_mode = false;
 
@@ -93,6 +94,14 @@ public class Inventory : MonoBehaviour
     public bool GetBow()
     {
         return hasBow;
+    }
+    public void AddBoomerang()
+    {
+        hasBoomerang = true;
+    }
+    public bool GetBoomerang()
+    {
+        return hasBoomerang;
     }
 
     public string GetWeapon()
