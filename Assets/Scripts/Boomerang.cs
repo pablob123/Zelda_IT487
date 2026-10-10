@@ -57,7 +57,6 @@ public class Boomerang : MonoBehaviour, Weapons
         Vector3 currPosition = transform.position;
 
         float elapsedTime = 0.0f;
-        //GameObject swordBeam;
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("WalkUp") && isThrown == false)
         {
             isThrown = true;
@@ -72,7 +71,9 @@ public class Boomerang : MonoBehaviour, Weapons
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
-                        //hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
+
+                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
                         {
                             Destroy(hit.collider.gameObject);
@@ -104,8 +105,10 @@ public class Boomerang : MonoBehaviour, Weapons
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
-                        //hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+
+                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -140,7 +143,7 @@ public class Boomerang : MonoBehaviour, Weapons
                         
                         hit.collider.GetComponent<frozenByBoomerang>().freeze();
 
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -172,8 +175,10 @@ public class Boomerang : MonoBehaviour, Weapons
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
-                        //hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
+
+                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
+                        if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {
                             Destroy(hit.collider.gameObject);
                         }
@@ -197,6 +202,21 @@ public class Boomerang : MonoBehaviour, Weapons
         while (Vector3.Distance(boomerang.transform.position, player.transform.position) > 0.2f)
         {
             boomerang.transform.position += (player.transform.position - boomerang.transform.position).normalized * .2f;
+            if (Physics.Raycast(boomerang.transform.position, -Vector3.right, out RaycastHit hit, .7f))
+            {
+                if (hit.collider.gameObject.CompareTag("enemy"))
+                {
+
+                    hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
+                    if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
+                    {
+                        Destroy(hit.collider.gameObject);
+                    }
+                    break;
+                }
+            }
+
             yield return null;
         }
         Destroy(boomerang);

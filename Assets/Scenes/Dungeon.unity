@@ -59243,17 +59243,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2617728331908589210, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
   m_PrefabInstance: {fileID: 1935730667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &559073465 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5122969553936952636, guid: 1419979850692c14d9cf08ba7e97b344, type: 3}
-  m_PrefabInstance: {fileID: 1935730667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559073460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828ad501c4739d34a930ff00a9581110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &559073468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59266,7 +59255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e050b455c6b79584b980ec9e0d854047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::frozenByBoomerang
-  movement: {fileID: 559073465}
+  enemy: {fileID: 559073460}
 --- !u!4 &559904648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3837697588202099093, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
@@ -97659,6 +97648,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4963697745707916881, guid: bf55961421798dd47ae02ffefbac1cfe, type: 3}
     - target: {fileID: 2687812654430310137, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687812654430310137, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -97713,7 +97706,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2905421920799492607, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570895018}
   m_SourcePrefab: {fileID: 100100000, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
 --- !u!4 &954433394 stripped
 Transform:
@@ -142292,7 +142288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e050b455c6b79584b980ec9e0d854047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  movement: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!1001 &1366269026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163191,6 +163187,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 790114acd11b04b4595bb664630b4cff, type: 3}
+--- !u!1 &1570895015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2905421920799492607, guid: 85e54415b491a3843b6cb0c2183b0c79, type: 3}
+  m_PrefabInstance: {fileID: 954112003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570895018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570895015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bb6fd6ac6fd224d85c5ad9501a1323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PushableBlock
 --- !u!1001 &1570928448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207473,7 +207486,7 @@ Transform:
   m_GameObject: {fileID: 1968298372}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.17568, y: 27.9934, z: 0}
+  m_LocalPosition: {x: 27.58, y: 58.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

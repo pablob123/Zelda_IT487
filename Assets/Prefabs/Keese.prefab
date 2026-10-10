@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4663486841672481269}
   - component: {fileID: 711334828621659048}
   - component: {fileID: 47032300314120528}
+  - component: {fileID: 453905039086542519}
   m_Layer: 7
   m_Name: Keese
   m_TagString: Untagged
@@ -182,3 +183,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HasHealth
   maxHealth: 1
+--- !u!114 &453905039086542519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617728331908589210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e050b455c6b79584b980ec9e0d854047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::frozenByBoomerang
+  enemy: {fileID: 2617728331908589210}
