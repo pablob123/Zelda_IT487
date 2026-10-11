@@ -35,6 +35,13 @@ public class Inventory : MonoBehaviour
             health_count = 6;
             bomb_count = 8;
             rupee_count = 999;
+            key_count = 99;
+
+            Bow bow = GetComponent<Bow>();
+            if (bow != null)    
+                {
+                    bow.ammoCount = 999;
+            }
         }
     }
 
