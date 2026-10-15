@@ -3,20 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|c:\\users\\pablo\\documents\\unity projects\\zelda\\zelda_it487\\assets\\scripts\\boomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|c:\\users\\pablo\\documents\\unity projects\\zelda\\zelda_it487\\assets\\scripts\\frozenbyboomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\frozenbyboomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\frozenbyboomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|c:\\users\\pablo\\documents\\unity projects\\zelda\\zelda_it487\\assets\\scripts\\keesemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\roomtransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\roomtransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\spiketrapmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spiketrapmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\pushableblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pushableblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pablo\\OneDrive\\Desktop\\Scripts\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\keesemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\keesemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrowkeymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +40,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\bow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\spiketrapmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spiketrapmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15B0CBAD-37AD-9BEC-F09F-76B47F79AA2B}|Assembly-CSharp.csproj|C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\assets\\scripts\\collector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,43 +53,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KeeseMovement.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\KeeseMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\KeeseMovement.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\KeeseMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\KeeseMovement.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-09T23:02:30.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frozenByBoomerang.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\frozenByBoomerang.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\frozenByBoomerang.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\frozenByBoomerang.cs",
-              "RelativeToolTip": "Assets\\Scripts\\frozenByBoomerang.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
+              "Title": "roomTransition.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\roomTransition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\roomTransition.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\roomTransition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\roomTransition.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAcwHwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-09T22:41:45.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-11T04:57:01.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "PushableBlock.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\PushableBlock.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PushableBlock.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\PushableBlock.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PushableBlock.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAvwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-11T05:41:40.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Boomerang.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Boomerang.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boomerang.cs",
               "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Boomerang.cs",
               "RelativeToolTip": "Assets\\Scripts\\Boomerang.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAIwNcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAgwL0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T22:32:05.379Z",
               "EditorCaption": ""
@@ -90,6 +95,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\OneDrive\\Desktop\\Scripts\\Inventory.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\OneDrive\\Desktop\\Scripts\\Inventory.cs",
+              "ToolTip": "C:\\Users\\pablo\\OneDrive\\Desktop\\Scripts\\Inventory.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\OneDrive\\Desktop\\Scripts\\Inventory.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-11T05:29:54.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frozenByBoomerang.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\frozenByBoomerang.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\frozenByBoomerang.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\frozenByBoomerang.cs",
+              "RelativeToolTip": "Assets\\Scripts\\frozenByBoomerang.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T22:41:45.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KeeseMovement.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\KeeseMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KeeseMovement.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\KeeseMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KeeseMovement.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwEUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T23:02:30.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Bow.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Bow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bow.cs",
@@ -101,19 +142,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "SpikeTrapMovement.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\SpikeTrapMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpikeTrapMovement.cs",
               "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\SpikeTrapMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpikeTrapMovement.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAUwG8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T23:07:06.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Sword.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sword.cs",
@@ -125,19 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Inventory.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Inventory.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T22:36:27.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Collector.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\Collector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collector.cs",
@@ -149,16 +178,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "ArrowKeyMovement.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\ArrowKeyMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ArrowKeyMovement.cs",
               "ToolTip": "C:\\Users\\pablo\\Documents\\Unity Projects\\Zelda\\Zelda_IT487\\Assets\\Scripts\\ArrowKeyMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\ArrowKeyMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T22:27:39.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T22:27:39.96Z"
             }
           ]
         }

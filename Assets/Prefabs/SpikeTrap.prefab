@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8720010300883975867}
   - component: {fileID: 1831189505913273246}
-  - component: {fileID: 3754946913682467340}
   - component: {fileID: 1786339355169995873}
   - component: {fileID: 1116305317969173612}
   - component: {fileID: 8700852491922263676}
-  m_Layer: 0
+  - component: {fileID: 6945891924435300192}
+  m_Layer: 2
   m_Name: SpikeTrap
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -95,27 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!65 &3754946913682467340
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2681671152628675423}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.16, y: 0.16, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1786339355169995873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,7 +111,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -155,6 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0003a50a4b3e81f4fbe50853350c305e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  moveUpToggle: 1
+  moveDownToggle: 1
+  moveRightToggle: 1
+  moveLeftToggle: 1
 --- !u!114 &8700852491922263676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +151,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   damage: 2
+--- !u!65 &6945891924435300192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681671152628675423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16, y: 0.16, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -71,8 +71,10 @@ public class Boomerang : MonoBehaviour, Weapons
                 {
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
-
-                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        if (hit.collider.GetComponent<frozenByBoomerang>() != null)
+                        {
+                            hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        }
 
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 0)
                         {
@@ -106,7 +108,10 @@ public class Boomerang : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
 
-                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        if (hit.collider.GetComponent<frozenByBoomerang>() != null)
+                        {
+                            hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        }
 
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {
@@ -140,8 +145,11 @@ public class Boomerang : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
                         //hit.collider.GetComponent<HasHealth>().TakeDamage(damage);
-                        
-                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+
+                        if (hit.collider.GetComponent<frozenByBoomerang>() != null)
+                        {
+                            hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        }
 
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {
@@ -176,7 +184,10 @@ public class Boomerang : MonoBehaviour, Weapons
                     if (hit.collider.gameObject.CompareTag("enemy"))
                     {
 
-                        hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        if (hit.collider.GetComponent<frozenByBoomerang>() != null)
+                        {
+                            hit.collider.GetComponent<frozenByBoomerang>().freeze();
+                        }
 
                         if (hit.collider.GetComponent<HasHealth>().GetCurrentHealth() == 1)
                         {

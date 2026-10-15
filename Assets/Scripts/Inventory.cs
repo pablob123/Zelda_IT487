@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,6 +11,13 @@ public class Inventory : MonoBehaviour
     public int key_count = 0;
     public bool hasBow = false;
     public bool hasBoomerang = false;
+    public bool hasBomb = false;
+
+
+    public List<int> weapons = new List<int>();
+    public int weaponsNumCount = -1;
+    public int currentWeapon = 0;
+    private int setWeapon = -1;
 
     public static bool god_mode = false;
 
@@ -35,14 +44,40 @@ public class Inventory : MonoBehaviour
             health_count = 6;
             bomb_count = 8;
             rupee_count = 999;
-            key_count = 99;
-
-            Bow bow = GetComponent<Bow>();
-            if (bow != null)    
-                {
-                    bow.ammoCount = 999;
-            }
+            key_count = 999;
+            AddBow();
+            AddBoomerang();
+            AddBombs(999);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(weapons.Count != 0)
+            {
+                setWeapon = sortWeapons();  
+            }
+              
+        }
+
+        if (setWeapon == 1)
+        {
+            hasBow = true;
+            hasBoomerang = false;
+            hasBomb = false;
+        }
+        else if (setWeapon == 2)
+        {
+            hasBow = false;
+            hasBoomerang = true;
+            hasBomb = false;
+        }
+        else if (setWeapon == 3)
+        {
+            hasBow = false;
+            hasBoomerang = false;
+            hasBomb = true;
+        }
+
     }
 
     public void AddRupees(int num_rupees)
@@ -68,6 +103,13 @@ public class Inventory : MonoBehaviour
 
     public void AddBombs(int num_bombs)
     {
+        if (!weapons.Contains(3))
+        {
+            weaponsNumCount++;
+            setWeapon = 3;
+            weapons.Insert(weaponsNumCount, 3);
+        }
+
         if (bomb_count < 8)
         {
             bomb_count += num_bombs;
@@ -96,7 +138,11 @@ public class Inventory : MonoBehaviour
     }
     public void AddBow()
     {
+        weaponsNumCount++;
         hasBow = true;
+        setWeapon = 1;
+        weapons.Insert(weaponsNumCount, 1);
+
     }
     public bool GetBow()
     {
@@ -104,7 +150,10 @@ public class Inventory : MonoBehaviour
     }
     public void AddBoomerang()
     {
+        weaponsNumCount++;
         hasBoomerang = true;
+        setWeapon = 2;
+        weapons.Insert(weaponsNumCount, 2);
     }
     public bool GetBoomerang()
     {
@@ -113,19 +162,44 @@ public class Inventory : MonoBehaviour
 
     public string GetWeapon()
     {
-        //Temp until more weapons are added
-        if (hasBow == true)
+        if (setWeapon == 1)
         {
             return "Bow";
         }
-        else
+        else if(setWeapon == 2)
         {
-            return "";
+            return "Boomerang";
         }
+        else if(setWeapon == 3)
+        {
+            return "Bomb";
+        }
+        return null;
     }
 
     public bool GetGodMode()
     {
         return god_mode;
+    }
+
+    public int sortWeapons()
+    {
+        if (weapons.Count == 0)
+        {
+            return -1;
+        }
+        else
+        {
+            if(currentWeapon < weaponsNumCount)
+            {
+                currentWeapon++;
+            }
+            else if(currentWeapon == weaponsNumCount)
+            {
+                currentWeapon = 0;
+            }
+        }
+
+        return weapons[currentWeapon];
     }
 }

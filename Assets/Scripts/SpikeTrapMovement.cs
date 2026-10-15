@@ -36,12 +36,14 @@ public class SpikeTrapMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isMoving == false)
         {
             if (Physics.Raycast(this.transform.position, Vector3.up, out RaycastHit hitUp, 6f) && moveUpToggle)
             {
                 if (hitUp.collider.gameObject.CompareTag("Player"))
                 {
+                    Debug.Log("E");
                     isMoving = true;
                     newY = positionY + 3f;
                     newX = positionX;

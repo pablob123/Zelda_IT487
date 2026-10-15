@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5352382185804972805}
   - component: {fileID: 9023952572129715688}
   - component: {fileID: 6635638606865690835}
+  - component: {fileID: -4847672522850143338}
   m_Layer: 0
   m_Name: Stalfos
   m_TagString: enemy
@@ -213,3 +214,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::frozenByBoomerang
   enemy: {fileID: 8184761958686324701}
+--- !u!114 &-4847672522850143338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184761958686324701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e5ce654df7d9745bf3221eff0664f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropItem
+  heart: {fileID: 5154531002713928087, guid: 1d0bcb581864abb41ac6d121681a3d08, type: 3}
+  rupee: {fileID: 7588680729598462655, guid: e286486eef8621f4f8a2f96610b4a801, type: 3}
+  bomb: {fileID: 1544655178775843280, guid: db6ebf1291379be46adc0df9953d6e34, type: 3}
+  playerHealth: {fileID: 0}
+  inventory: {fileID: 0}

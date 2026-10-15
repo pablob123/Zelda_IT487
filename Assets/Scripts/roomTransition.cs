@@ -118,8 +118,13 @@ public class roomTransition : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("doorLock"))
         {
-            if(inventory.GetKey() >= 1)
+            if (inventory.GetKey() >= 1)
             {
+                if (collision.transform.parent != null && collision.transform.parent.CompareTag("doorLock"))
+                {
+                    Destroy(collision.transform.parent.gameObject);
+
+                }
                 Destroy(collision.gameObject);
                 inventory.ChangeKey(-1);
             }

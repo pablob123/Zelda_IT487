@@ -19,8 +19,9 @@ public class PushableBlock : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Player") && canPush == false)
+        if (collision.collider.CompareTag("Player") && canPush == false && collision.collider.GetComponent<Animator>())
         {
+            Debug.Log("E");
             StartCoroutine(moveBlock(collision));
         }
 

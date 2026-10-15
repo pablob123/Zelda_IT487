@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 711334828621659048}
   - component: {fileID: 47032300314120528}
   - component: {fileID: 453905039086542519}
+  - component: {fileID: 3995023769545348973}
   m_Layer: 7
   m_Name: Keese
   m_TagString: Untagged
@@ -196,3 +197,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::frozenByBoomerang
   enemy: {fileID: 2617728331908589210}
+--- !u!114 &3995023769545348973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617728331908589210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e5ce654df7d9745bf3221eff0664f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropItem
+  heart: {fileID: 5154531002713928087, guid: 1d0bcb581864abb41ac6d121681a3d08, type: 3}
+  rupee: {fileID: 7588680729598462655, guid: e286486eef8621f4f8a2f96610b4a801, type: 3}
+  bomb: {fileID: 1544655178775843280, guid: db6ebf1291379be46adc0df9953d6e34, type: 3}
+  playerHealth: {fileID: 0}
+  inventory: {fileID: 0}
